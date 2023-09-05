@@ -106,6 +106,7 @@ class CommissionPayment(Document):
 			self.total_selling += row_commission_amount.amount
 
 
+
 	def update_invoice_partner1(self):
 		for inv in self.commission_table:
 			frappe.db.sql("""  update `tabSales Invoice` set paid = 1 where name = %s """,inv.sales_invoice)
